@@ -1,0 +1,53 @@
+/*AULA IV - 15/08/2024*/
+
+body {
+    background-color:darkslategray
+}
+
+div {
+    font-weight: bold;
+    font-size: medium;
+}
+
+header {
+    text-align: center;
+}
+
+#cadastro {
+    font-weight: bolder;
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif    ;
+}
+
+#div1 {
+    background-color: aqua;
+}
+
+#div2 {
+    background-color: yellow;
+}
+
+#div3 {
+    background-color: green;
+}
+
+legend {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+form {
+ background-color:orangered;
+ line-height: 200%;
+}
+
+label {
+    color: black;
+    font-size:large;
+}
+
+input {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}

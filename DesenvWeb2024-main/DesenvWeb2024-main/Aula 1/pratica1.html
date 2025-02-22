@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="cadastro">Cadastro</h1>
+    </header>
+    <form>
+        <fieldset>
+            <legend>Insira seus dados pessoais</legend>
+            <label for="nome">Nome:</label>
+                <input type="text" name="Nome" size="25" placeholder="Digite seu nome" maxlength="50" required="required" id="nome" autofocus>
+            <hr>
+            <label for="CPF">CPF</label>
+                <input type="radio" name="CPF" required="required" id="CPF">
+            <label for="CNPJ">CNPJ</label>
+                <input type="radio" name="CNPJ" required="required" id="CPF">
+            <hr>
+            <h3>Endereço</h3>
+            <label for="cidade">Cidade:</label>
+                <input type="text" name="cidade" size="25" placeholder="Insira sua cidade" maxlength="100" required="required" id="cidade">
+            <br> <br>    
+            <label for="estado">Estado:</label>    
+                <input type="text" name="estado" size="25" placeholder="Insira o estado em que reside" maxlength="50" required="required" id="estado">
+            <br> <br>
+            <label for="rua">Rua:</label>    
+                <input type="text" name="rua" size="25" placeholder="Insira a rua em que reside" maxlength="100" required="required" id="rua">
+            <br> <br>
+            <label for="numero">Número da residência:</label>    
+                <input type="number" name="número" placeholder="Insira o número da residência em que reside" required="required" id="numero">
+            <br> <br>
+            <label for="bairro">Bairro:</label>    
+                <input type="text" name="bairro" size="25" placeholder="Insira o bairro em que reside" maxlength="40" required="required" id="bairro">
+            <br> <br>
+            <label for="CEP">CEP:</label>    
+                <input type="number" name="CEP" placeholder="Insira o CEP da cidade" required="required" id="CEP">
+            <hr>
+            <label for="tele">Número de Telefone: </label>
+                <input type="number" name="telefone" id="tele" placeholder="Insira seu número de telefone" required="required">
+            <hr>
+                <input type="submit" value="Enviar Cadastro" name="enviar">
+                <input type="reset" name="limpar" value="Limpar">
+        </fieldset>
+        <br> 
+        <footer>
+            <address> 
+                Anderson Nilton de Souza
+                <br>
+                Email: anderson.souza@unidavi.edu.br
+                <br>
+                Laurentino, Santa Catarina, Brasil
+            </address>
+        </footer>
+    </form> 
+</body>
+</html>
