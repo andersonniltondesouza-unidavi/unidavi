@@ -1,0 +1,6 @@
+@ConFinSever_HostAddress = http://localhost:5261
+
+GET {{ConFinSever_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
