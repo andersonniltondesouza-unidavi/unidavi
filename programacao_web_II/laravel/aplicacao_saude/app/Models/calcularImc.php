@@ -3,10 +3,19 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use DateTime;
 
-class calcular extends Model
+class calcularImc extends Model
 {
-    public function getCalcular($peso, $altura)
+    public function calcularIdade($dataNascimento)
+    {
+       $dataNascimento = new  DateTime($dataNascimento);
+        $hoje = new DateTime();
+        $idade = $dataNascimento->diff($hoje);
+        return $idade->y;
+    }
+
+    public function getCalcularImc($peso, $altura)
     {
         if ($altura == 0 || $altura == null) {
             throw new \Exception('Altura não pode ser zero ou nula');
@@ -39,4 +48,6 @@ class calcular extends Model
             return $classificacao;
         }
     }
+
+
 }

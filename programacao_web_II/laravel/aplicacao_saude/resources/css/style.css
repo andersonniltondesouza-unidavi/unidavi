@@ -32,7 +32,7 @@ form {
 }
 
 input {
-    width: 80%;
+    width: 100%;
     max-width: 250px;
     padding: 8px;
     font-size: 14px;
