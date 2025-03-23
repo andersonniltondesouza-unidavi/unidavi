@@ -6,7 +6,7 @@ use App\Http\Controllers\ResultadoSonoController;
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
-    return view('imc');
+    return view('sono');
 });
 
 Route::resource('/resultado_sono', ResultadoSonoController::class);

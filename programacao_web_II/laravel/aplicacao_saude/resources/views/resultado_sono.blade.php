@@ -6,6 +6,16 @@
     <title>Atividade PW2 - Resultado Avaliação Sono</title>
 </head>
 <body>
-    <?php echo "Idade = " . $idade; ?>
+    <?php
+        echo "Nome = " . $nome;
+        echo "<br>";
+        echo "Idade = " . $idade;
+        echo "<br>";
+        echo "Horas de sono = " . $horas;
+        echo "<br>"; 
+        echo "Classificação: " . $classificacao; 
+        echo "<br>";
+        echo "Qualidade do sono: " . $qualidadeSono;
+    ?>
 </body>
 </html>
