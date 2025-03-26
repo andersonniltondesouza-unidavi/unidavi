@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade PW2 - Home</title>
 </head>
+@if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+            @vite(['resources/css/style.css', 'resources/js/app.js'])
+        @else
+            <link rel="stylesheet" href="{{ mix('resources/css/style.css') }}">
+        @endif
 <body>
     <div>
         <h1>Home</h1>
@@ -13,9 +18,9 @@
             Selecione uma das opções abaixo:       
         </p>
         <ul>
-            <li><<a>Calcular IMC</a></li>
-            <li><a>Avaliar o sono</a></li>
-            <li><a">Gastos de Viagem</a></li>
+            <li><a href="{{url('/imc')}}">Calcular IMC</a></li>
+            <li><a href="{{url('/sono')}}">Avaliar o sono</a></li>
+            <li><a href="{{url('/combustivel')}}">Gastos de Viagem</a></li>
         </ul>
     </div>
 </body>

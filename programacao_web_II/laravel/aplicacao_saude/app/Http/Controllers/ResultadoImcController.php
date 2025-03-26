@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 
 class ResultadoImcController extends Controller
 {
-    public function store()
-    {
+    public function retornarImc() {
+        return view('imc');
+    }
+
+    public function store() {
         $imc = new calcularImc();
         $idade = new calcularImc();
         $data['nome'] = request('nome');
