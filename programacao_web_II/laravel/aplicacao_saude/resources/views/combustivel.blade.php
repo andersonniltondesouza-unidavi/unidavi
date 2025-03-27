@@ -23,13 +23,13 @@
         </select>
         <br>
         <label for="valor">Valor:</label>
-        <input type="float" name="valor" id="valor" required>
+        <input type="number" name="valor" id="valor" step="0.1" required>
         <br>
         <label for="distancia">Distância em KM:</label>
-        <input type="float" name="distancia" id="distancia" required>
+        <input type="number" name="distancia" id="distancia" step="0.1" required>
         <br>
         <label for="consumo_litro">Consumo de combustivel (KM/L):</label>
-        <input type="float" name="consumo_litro" id="consumo_litro" required>
+        <input type="number" name="consumo_litro" id="consumo_litro" step="0.1" required>
         <br>
         <button type="submit">Calcular</button>
     </form>  

@@ -22,7 +22,7 @@
         <input type="date" name="data_nascimento" id="data_nascimento" required>
         <br>
         <label for="horas">Horas de Sono:</label>
-        <input type="float" name="horas" id="horas" required>
+        <input type="number" name="horas" id="horas" step="0.1" required>
         <br>
         <button type="submit">Calcular</button>
     </form>  

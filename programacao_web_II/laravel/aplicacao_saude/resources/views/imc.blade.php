@@ -20,10 +20,10 @@
         <label for="idade">Data de Nascimento</label>
         <input type="date" name="data_nascimento" id="data_nascimento" required>
         <label for="peso">Peso:</label>
-        <input type="float" name="peso" id="peso" required>
+        <input type="number" name="peso" id="peso" step="0.1" required>
         <br>
         <label for="altura">Altura:</label>
-        <input type="float" name="altura" id="altura" required>
+        <input type="number" name="altura" id="altura" step="0.1" required>
         <br>
         <button type="submit">Calcular</button>
     </form>
