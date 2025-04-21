@@ -10,7 +10,6 @@ class ResultadoCombustivelController extends Controller
         return view('combustivel');
     }
 
-
     public function store() {
         $consumo = new calcularConsumo();
         $data['distancia']= request('distancia');
