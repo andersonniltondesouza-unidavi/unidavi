@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContatosController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TipoContatoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,8 +13,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/contatos/search', [ContatosController::class, 'search'])->name('contatos.search')->middleware(['auth', 'verified']);
+
 Route::resource('contatos',ContatosController::class)->middleware(['auth', 'verified']);
 
+Route::resource('tipoContatos',TipoContatoController::class)->middleware(['auth', 'verified']);
 
 Route::get('/about', function () {
     return view('about');

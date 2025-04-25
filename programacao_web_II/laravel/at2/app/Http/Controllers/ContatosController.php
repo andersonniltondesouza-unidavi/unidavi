@@ -14,9 +14,10 @@ class ContatosController extends Controller
     {
         // Fetch all contacts from the database
         $contatos = Contato::all();
+        $q = null;
 
         // Return the view with the contacts data
-        return view('contatos.index', compact('contatos'));
+        return view('contatos.index', compact('contatos','q'));
     }
 
     /**
@@ -65,13 +66,26 @@ class ContatosController extends Controller
         return view('contatos.show', compact('contato'));
     }
 
+    public function search(Request $request)
+    {
+        $q=$request->input('q');
+        // Search for contacts based on the search input
+        $contatos = Contato::where('nome', 'like', '%' . $request->input('q') . '%')
+            ->orWhere('email', 'like', '%' . $request->input('q') . '%')
+            ->get();
+
+        // Return the view with the search results
+        return view('contatos.index', compact('contatos', 'q'));
+    }
+
+
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
         $contato = Contato::findOrFail($id);
-        return view('contatos.edit', compact('contato'));  
+        return view('contatos.edit', compact('contato'));
     }
 
     /**
