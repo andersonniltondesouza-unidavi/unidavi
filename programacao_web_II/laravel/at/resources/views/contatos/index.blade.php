@@ -42,8 +42,7 @@
                     @endif
                     @foreach ($contatos as $contato)
                         <div class="mb-4">
-                            <a href="{{ route('contatos.show', $contato->id) }}" class="hover:bg-blue-900 hover:white hover:text-white rounded-md px-2 py-1">
-                            <strong>{{ $contato->nome }}</strong></a> -
+                            <a href="{{ route('contatos.show', $contato->id) }}" class="hover:bg-blue-900 hover:white hover:text-white rounded-md px-2 py-1">{{ $contato->nome }}</a> 
                             <a href="mailto:{{ $contato->email }}" class="hover:underline to-blue-950">{{ $contato->email }}</a>
                             &nbsp;-&nbsp;
                             <a href="{{ url("contatos") }}/{{ $contato->id }}/edit" class="bg-green-700 hover:bg-green-900 text-white font-bold py-1 px-2 rounded">Alterar</a>

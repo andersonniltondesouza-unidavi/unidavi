@@ -27,7 +27,6 @@
                                 @csrf
                                 @method('DELETE')
                             </form>
-
                         </div>
                     @endforeach
                 </div>
