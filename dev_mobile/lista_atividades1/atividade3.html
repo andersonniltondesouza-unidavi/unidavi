@@ -1,0 +1,50 @@
+<!-- Três blocos numerados (A, B, C) devem ser exibidos em ordem A-B-C. 
+ - Em telas pequenas, reordene visualmente para C-B-A usando a propriedade order. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<style>
+
+.container {
+    display: flex;
+}
+
+#A {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 10px;
+    order: 1;
+}
+
+#B {
+    background-color: lightgreen;
+    padding: 20px;
+    margin: 10px;
+    order: 2; 
+}
+
+#C {
+    background-color: lightcoral;
+    padding: 20px;
+    margin: 10px;
+    order: 3; 
+}
+
+@media (max-width: 768px) {
+    #A { order: 3; }
+    #B { order: 2; }
+    #C { order: 1; }
+}
+</style>
+<body>
+    <div class="container">
+        <div id="A">Bloco A</div>
+        <div id="B">Bloco B</div>
+        <div id="C">Bloco C</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- Crie um container com 6 cartões usando Flexbox e flex-wrap para permitir a quebra de linha.  
+ Cada cartão deve ocupar 100% da largura em dispositivos móveis, utilizando flex: 1 1 100%.  
+ Em telas maiores, use media queries para ajustar cada cartão a 30% da largura (flex: 1 1 30%). 
+ - Estilize com padding, margin e background.
+ -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<style>
+
+body {
+    background-color: lightgray;
+}   
+
+#container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+@media (max-width: 768px) {
+    button {
+        display: flex;
+        flex: 1 1 100%;
+        margin: 10px;
+        padding: 2%;
+        padding-left: 40%;
+    }   
+}
+
+@media (min-width: 769px) {
+    button {
+        display: flex;
+        flex: 1 1 30%;
+        margin: 10px;
+        padding: 2%;
+        padding-left: 15%;
+    }   
+}               
+</style>
+
+<body>
+    <div id="container">
+        <button> Cartão 1</button>
+        <button> Cartão 2</button>
+        <button> Cartão 3</button>
+        <button> Cartão 4</button>
+        <button> Cartão 5</button>
+        <button> Cartão 6</button>
+    </div>
+</body>
+</html>
