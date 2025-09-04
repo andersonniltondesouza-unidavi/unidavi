@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background: #111;
+  padding: 10px 20px;
+}
+
+.logo {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.menu ul {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  justify-content: end;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ffcc00;
+}
+
+.hamburguer {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.item {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img {
+  width: 30%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.item:hover img {
+  transform: scale(1.05);
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: auto auto;
+    position: relative;
+  }
+
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    background: #333;
+    border-radius: 8px;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  .menu ul {
+    display: grid;
+    grid-auto-flow: row;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .hamburguer {
+    display: block;
+    justify-self: end;
+  }
+}

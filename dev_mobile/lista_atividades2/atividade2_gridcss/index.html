@@ -1,57 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 2 - Grid CSS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 2 - CSS Grid</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 </head>
 <body>
 
-    <header id="header">
-        <div id="div-header">
-            <img src="" alt="Logo">
-            
-            <input type="text" placeholder="Pesquisar...">
-        </div>
-    </header>
+  <header>
+  <img src="img/logo-nike.png" alt="Logo" class="logo" />
+  
+  <div class="hamburguer" onclick="toggleMenu()">
+    ☰
+  </div>
 
-    <nav>
-        <div class="produto">
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+</header>
 
-        </div>
+  <main class="grid-container">
+    <section class="item">
+      <img src="img/tenis_nike1.jpg" alt="Produto 1">
+      <h3>Produto 1</h3>
+    </section>
+    <section class="item">
+      <img src="img/tenis_nike1.jpg" alt="Produto 2">
+      <h3>Produto 2</h3>
+    </section>
+    <section class="item">
+      <img src="img/tenis_nike1.jpg" alt="Produto 3">
+      <h3>Produto 3</h3>
+    </section>
+    <section class="item">
+      <img src="img/tenis_nike1.jpg" alt="Produto 4">
+      <h3>Produto 4</h3>
+    </section>
+    <section class="item">
+      <img src="img/tenis_nike1.jpg" alt="Produto 5">
+      <h3>Produto 5</h3>
+    </section>
+    <section class="item">
+      <img src="img/tenis_nike1.jpg" alt="Produto 6">
+      <h3>Produto 6</h3>
+    </section>
+    <section class="item">
+      <img src="img/tenis_nike1.jpg" alt="Produto 7">
+      <h3>Produto 7</h3>
+    </section>
+    <section class="item">
+      <img src="img/tenis_nike1.jpg" alt="Produto 8">
+      <h3>Produto 8</h3>
+    </section>
+  </main>
 
-        <div class="produto">
+  <footer>
+    <p> Desenvolvido por Anderson Nilton de Souza
+      <br>
+      anderson.souza@unidavi.edu.br
+    </p>
+  </footer>
 
-        </div>
-
-        <div class="produto">
-
-        </div>
-
-        <div class="produto">
-
-        </div>
-
-        <div class="produto">
-
-        </div>
-
-        <div class="produto">
-
-        </div>
-        
-        <div class="produto">
-
-        </div>
-
-        <div class="produto">
-
-        </div>
-    </nav>
-
-    <footer>
-        
-    </footer>
-
+  <script src="menu.js"></script>
 </body>
 </html>

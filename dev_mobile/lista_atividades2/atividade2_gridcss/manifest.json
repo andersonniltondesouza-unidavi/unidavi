@@ -1,0 +1,22 @@
+{
+  "name": "Atividade 2 - CSS Grid",
+  "short_name": "Atividade",
+  "description": "Ativdade de Dev Mobile usando CSS Grid.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111111",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/logo-nike.png",
+      "sizes": "225x225",
+      "type": "image/png"
+    },
+    {
+      "src": "img/tenis_nike1.png",
+      "sizes": "800x1000",
+      "type": "image/jpg"
+    }
+  ]
+}
