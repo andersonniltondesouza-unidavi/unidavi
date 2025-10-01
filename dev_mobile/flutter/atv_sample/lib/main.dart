@@ -14,6 +14,7 @@ class SpacedItemsList extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // Alteração do cor de fundo dos cards
         cardTheme: CardThemeData(color: Colors.yellowAccent),
       ),
       home: Scaffold(
@@ -27,6 +28,7 @@ class SpacedItemsList extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: List.generate(
                     items,
+                    // Alteração para começar a contagem a partir de 1
                     (index) => ItemWidget(text:'Cartão ${index + 1}'),
                   ),
                 ),
@@ -47,6 +49,7 @@ class ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      // Adição de ícones dentro do card e alteração do estilo do texto
       child: SizedBox(height: 100, child: Row(mainAxisAlignment: MainAxisAlignment.center ,children: [Icon(Icons.access_alarms_outlined, color: Colors.lightGreen), Text(text, style:TextStyle(color: Colors.red),), Icon(Icons.star, color: Colors.lightGreen) ] )),
     );
   }
