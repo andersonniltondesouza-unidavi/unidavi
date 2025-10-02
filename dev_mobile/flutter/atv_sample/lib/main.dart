@@ -8,7 +8,6 @@ class SpacedItemsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const items = 6;
-
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
