@@ -49,7 +49,9 @@ class ItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       // Adição de ícones dentro do card e alteração do estilo do texto
-      child: SizedBox(height: 100, child: Row(mainAxisAlignment: MainAxisAlignment.center ,children: [Icon(Icons.access_alarms_outlined, color: Colors.lightGreen), Text(text, style:TextStyle(color: Colors.red),), Icon(Icons.star, color: Colors.lightGreen) ] )),
+      child: SizedBox(height: 100, child: Row(mainAxisAlignment: MainAxisAlignment.center ,
+      children: [Icon(Icons.access_alarms_outlined, color: Colors.lightGreen), 
+      Text(text, style:TextStyle(color: Colors.red),), Icon(Icons.star, color: Colors.lightGreen) ] )),
     );
   }
 }
