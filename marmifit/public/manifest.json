@@ -1,0 +1,17 @@
+{
+  "name": "MarmiFit",
+  "short_name": "MarmiFit",
+  "description": "Aplicação PWA para gerenciamento de marmitas.",
+  "start_url": "/",
+  "display": "standalone",  
+  "background_color": "#ffffff",
+  "theme_color": "#111111",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/marmifit_logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

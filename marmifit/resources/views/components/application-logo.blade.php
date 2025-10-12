@@ -1,0 +1,1 @@
+<img src="{{ asset('images/marmifit_logo.png') }}" alt="Logo" class="h-20"/>

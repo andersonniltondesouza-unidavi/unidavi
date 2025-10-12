@@ -17,7 +17,7 @@ class TimesController extends Controller
         $times = Times::all();
         $q = null;
         
-        return view('times.index', compact('times','q'));
+        return view('times.index', compact('times','q'));return view('times.index', compact('times','q'));
     }
 
     /**
