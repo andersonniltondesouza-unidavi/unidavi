@@ -57,4 +57,40 @@ class MarmitaController extends Controller
             return redirect()->route('marmitas.index')->with('success', 'Marmita adicionada com sucesso!');
         }
     }
+
+    public function edit(string $id)
+    {
+        $marmita = Marmitas::findOrFail($id);
+        return view('marmitas.edit', compact('marmita'));
+    }
+
+    public function update(Request $request, string $id)
+    {
+        // Validate the request data
+        $request->validate([
+            'nome' => 'required|string|max:255',
+            'descricao' => 'required|string',
+            'preco' => 'required|numeric',
+            'tamanho' => 'required|string|max:50',
+        ]);
+
+        $marmita = Marmitas::findOrFail($id);
+        $marmita->nome = $request->input('nome');
+        $marmita->descricao = $request->input('descricao');
+        $marmita->preco = $request->input('preco');
+        $marmita->tamanho = $request->input('tamanho');
+        if ($marmita->save()) {
+            // If the team is saved successfully, redirect to the index page
+            return redirect()->route('marmitas.index')->with('success', 'Marmita atualizada com sucesso!');
+        }
+    }
+
+     public function destroy(string $id)
+    {
+        $marmita = Marmitas::FindorFail($id);
+        if ($marmita->delete()) {
+            return redirect()->route("marmitas.index")->with('sucess', 'Marmita excluída!');
+        }
+    }
 }
+
