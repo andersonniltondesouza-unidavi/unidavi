@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Mensalidades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestão de Mensalidades</h1>
+    </header>
+
+    <main class="container">
+        <section class="turma-manager">
+            <h2>Gerenciar Turmas</h2>
+            <form id="create-turma-form">
+                <div class="form-group">
+                    <label for="new-turma-name">Nome da Nova Turma:</label>
+                    <input type="text" id="new-turma-name" placeholder="Ex: Turma A - Matutino" required>
+                </div>
+                <button type="submit">Criar Turma</button>
+            </form>
+            <hr>
+            <div class="form-group">
+                <label for="turma-selector">Selecionar Turma Ativa:</label>
+                <select id="turma-selector">
+                    <option value="">-- Nenhuma turma selecionada --</option>
+                </select>
+            </div>
+        </section>
+
+        <div id="turma-details-container">
+            <h2 id="active-turma-title"></h2>
+
+            <section class="config-panel">
+                <h3>Configurações da Turma</h3>
+                <form id="config-form">
+                    <div class="form-group">
+                        <label for="config-base">Mensalidade Base (R$):</label>
+                        <input type="number" id="config-base" step="0.01" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="config-due-date">Data de Vencimento:</label>
+                        <input type="date" id="config-due-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="config-late-fee">Multa por Atraso (%):</label>
+                        <input type="number" id="config-late-fee" step="1" min="0" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="config-cap">Teto de Desconto (%):</label>
+                        <input type="number" id="config-cap" step="1" min="0" max="100" required>
+                    </div>
+                    <button type="submit">Atualizar Configurações</button>
+                    <div id="config-validation-error" class="error"></div>
+                </form>
+            </section>
+
+            <section class="input-panel">
+                <h3>Registrar Aluno na Turma</h3>
+                <form id="student-form">
+                    <div class="form-group">
+                        <label for="student-name">Nome do Aluno:</label>
+                        <input type="text" id="student-name" placeholder="Inserir Aluno" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-date">Data de Pagamento:</label>
+                        <input type="date" id="payment-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="scholarship">Bolsa (%):</label>
+                        <input type="number" id="scholarship" min="0" max="100" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="family-discount">Desconto Família (%):</label>
+                        <input type="number" id="family-discount" min="0" max="100" value="0">
+                    </div>
+                    <button type="submit">Adicionar Aluno</button>
+                    <div id="validation-error" class="error"></div>
+                </form>
+            </section>
+
+            <section class="data-panel">
+                <h3>Alunos Registrados</h3>
+                <ul id="student-list">
+                    </ul>
+                <button id="process-button">Processar Turma</button>
+            </section>
+
+            <section class="output-panel">
+                <h3>Resultados do Processamento</h3>
+                <div id="results">
+                    </div>
+                <h3>Totais da Turma</h3>
+                <div id="totals">
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por: Anderson Nilton de Souza e Gabriel Wellington Renzi</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
