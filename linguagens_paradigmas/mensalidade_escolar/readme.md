@@ -5,8 +5,8 @@ Este projeto é uma aplicação web para calcular os valores de mensalidades esc
 O objetivo principal é demonstrar a aplicação de conceitos de Programação Funcional (PF) em JavaScript, como funções puras, imutabilidade e funções de ordem superior (`map`, `reduce`), para gerenciar um estado de aplicação complexo de forma previsível e segura.
 
 **Desenvolvido por:**
-* Anderson Nilton de Souza (`@andersonniltondesouza-unidavi`)
-* Gabriel Wellington Renzi (`@GabrielRenzi`)
+* Anderson Nilton de Souza [@andersonniltondesouza-unidavi](https://github.com/andersonniltondesouza-unidavi)
+* Gabriel Wellington Renzi [@GabrielRenzi](https://github.com/GabrielRenzi)
 
 ---
 
